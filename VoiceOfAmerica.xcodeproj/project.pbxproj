@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2850D80A2A5AB9D5745749A0 /* Pods_VoiceOfAmerica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A06A6B21E7CD1CDF2F187F84 /* Pods_VoiceOfAmerica.framework */; };
+		72A38D0D06B285BA5D06745E /* Pods_VoiceOfAmericaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A70F69A0B020E37FDB7C66 /* Pods_VoiceOfAmericaTests.framework */; };
 		B2AFB141234EC52E00F14B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB140234EC52E00F14B4C /* AppDelegate.swift */; };
 		B2AFB143234EC52E00F14B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB142234EC52E00F14B4C /* ViewController.swift */; };
 		B2AFB146234EC52E00F14B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AFB144234EC52E00F14B4C /* Main.storyboard */; };
@@ -26,6 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16A70F69A0B020E37FDB7C66 /* Pods_VoiceOfAmericaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceOfAmericaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		191C4C2579F53B32730117C6 /* Pods-VoiceOfAmerica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmerica.debug.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica.debug.xcconfig"; sourceTree = "<group>"; };
+		5F168E42D94DE6C90F51F173 /* Pods-VoiceOfAmericaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmericaTests.debug.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmericaTests/Pods-VoiceOfAmericaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		702C816635A1DBFDA4F88B37 /* Pods-VoiceOfAmericaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmericaTests.release.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmericaTests/Pods-VoiceOfAmericaTests.release.xcconfig"; sourceTree = "<group>"; };
+		80236DCA0846F085FB868D01 /* Pods-VoiceOfAmerica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmerica.release.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica.release.xcconfig"; sourceTree = "<group>"; };
+		A06A6B21E7CD1CDF2F187F84 /* Pods_VoiceOfAmerica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceOfAmerica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AFB13D234EC52E00F14B4C /* VoiceOfAmerica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceOfAmerica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AFB140234EC52E00F14B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2AFB142234EC52E00F14B4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2850D80A2A5AB9D5745749A0 /* Pods_VoiceOfAmerica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +59,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A38D0D06B285BA5D06745E /* Pods_VoiceOfAmericaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B8F6810ECA30548BD837DC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A06A6B21E7CD1CDF2F187F84 /* Pods_VoiceOfAmerica.framework */,
+				16A70F69A0B020E37FDB7C66 /* Pods_VoiceOfAmericaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B2AFB134234EC52D00F14B4C = {
 			isa = PBXGroup;
 			children = (
 				B2AFB13F234EC52E00F14B4C /* VoiceOfAmerica */,
 				B2AFB154234EC52F00F14B4C /* VoiceOfAmericaTests */,
 				B2AFB13E234EC52E00F14B4C /* Products */,
+				E96CDEFFDB7E6DCDF3A6651D /* Pods */,
+				5B8F6810ECA30548BD837DC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +117,18 @@
 			path = VoiceOfAmericaTests;
 			sourceTree = "<group>";
 		};
+		E96CDEFFDB7E6DCDF3A6651D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				191C4C2579F53B32730117C6 /* Pods-VoiceOfAmerica.debug.xcconfig */,
+				80236DCA0846F085FB868D01 /* Pods-VoiceOfAmerica.release.xcconfig */,
+				5F168E42D94DE6C90F51F173 /* Pods-VoiceOfAmericaTests.debug.xcconfig */,
+				702C816635A1DBFDA4F88B37 /* Pods-VoiceOfAmericaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2AFB15A234EC52F00F14B4C /* Build configuration list for PBXNativeTarget "VoiceOfAmerica" */;
 			buildPhases = (
+				BE07C00257CB97DCB76029EE /* [CP] Check Pods Manifest.lock */,
 				B2AFB139234EC52E00F14B4C /* Sources */,
 				B2AFB13A234EC52E00F14B4C /* Frameworks */,
 				B2AFB13B234EC52E00F14B4C /* Resources */,
+				05B48113984C9B0035F365F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +155,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2AFB15D234EC52F00F14B4C /* Build configuration list for PBXNativeTarget "VoiceOfAmericaTests" */;
 			buildPhases = (
+				B9CDEBA40ECDA29D85714498 /* [CP] Check Pods Manifest.lock */,
 				B2AFB14D234EC52F00F14B4C /* Sources */,
 				B2AFB14E234EC52F00F14B4C /* Frameworks */,
 				B2AFB14F234EC52F00F14B4C /* Resources */,
@@ -191,6 +227,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05B48113984C9B0035F365F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9CDEBA40ECDA29D85714498 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoiceOfAmericaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE07C00257CB97DCB76029EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoiceOfAmerica-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2AFB139234EC52E00F14B4C /* Sources */ = {
@@ -358,6 +458,7 @@
 		};
 		B2AFB15B234EC52F00F14B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 191C4C2579F53B32730117C6 /* Pods-VoiceOfAmerica.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +477,7 @@
 		};
 		B2AFB15C234EC52F00F14B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80236DCA0846F085FB868D01 /* Pods-VoiceOfAmerica.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +496,7 @@
 		};
 		B2AFB15E234EC52F00F14B4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F168E42D94DE6C90F51F173 /* Pods-VoiceOfAmericaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +518,7 @@
 		};
 		B2AFB15F234EC52F00F14B4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 702C816635A1DBFDA4F88B37 /* Pods-VoiceOfAmericaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
