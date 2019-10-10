@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B2AFB141234EC52E00F14B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB140234EC52E00F14B4C /* AppDelegate.swift */; };
-		B2AFB143234EC52E00F14B4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB142234EC52E00F14B4C /* ViewController.swift */; };
-		B2AFB146234EC52E00F14B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AFB144234EC52E00F14B4C /* Main.storyboard */; };
+		B2AFB143234EC52E00F14B4C /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB142234EC52E00F14B4C /* VoteViewController.swift */; };
 		B2AFB148234EC52F00F14B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AFB147234EC52F00F14B4C /* Assets.xcassets */; };
 		B2AFB14B234EC52F00F14B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AFB149234EC52F00F14B4C /* LaunchScreen.storyboard */; };
 		B2AFB156234EC52F00F14B4C /* VoiceOfAmericaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB155234EC52F00F14B4C /* VoiceOfAmericaTests.swift */; };
+		B2AFB161234ECBE700F14B4C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB160234ECBE700F14B4C /* Coordinator.swift */; };
+		B2AFB163234ECC7500F14B4C /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB162234ECC7500F14B4C /* FlowCoordinator.swift */; };
+		B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB164234ECEB800F14B4C /* CoordinatorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +30,16 @@
 /* Begin PBXFileReference section */
 		B2AFB13D234EC52E00F14B4C /* VoiceOfAmerica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceOfAmerica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AFB140234EC52E00F14B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2AFB142234EC52E00F14B4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2AFB145234EC52E00F14B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B2AFB142234EC52E00F14B4C /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
 		B2AFB147234EC52F00F14B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2AFB14A234EC52F00F14B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2AFB14C234EC52F00F14B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2AFB151234EC52F00F14B4C /* VoiceOfAmericaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceOfAmericaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AFB155234EC52F00F14B4C /* VoiceOfAmericaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceOfAmericaTests.swift; sourceTree = "<group>"; };
 		B2AFB157234EC52F00F14B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2AFB160234ECBE700F14B4C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B2AFB162234ECC7500F14B4C /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		B2AFB164234ECEB800F14B4C /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,9 @@
 		B2AFB13F234EC52E00F14B4C /* VoiceOfAmerica */ = {
 			isa = PBXGroup;
 			children = (
-				B2AFB140234EC52E00F14B4C /* AppDelegate.swift */,
-				B2AFB142234EC52E00F14B4C /* ViewController.swift */,
-				B2AFB144234EC52E00F14B4C /* Main.storyboard */,
-				B2AFB147234EC52F00F14B4C /* Assets.xcassets */,
-				B2AFB149234EC52F00F14B4C /* LaunchScreen.storyboard */,
+				B2AFB168234ED12C00F14B4C /* Other */,
+				B2AFB167234ED10500F14B4C /* ViewControllers */,
+				B2AFB166234ED0D900F14B4C /* Coordinators */,
 				B2AFB14C234EC52F00F14B4C /* Info.plist */,
 			);
 			path = VoiceOfAmerica;
@@ -94,6 +96,34 @@
 				B2AFB157234EC52F00F14B4C /* Info.plist */,
 			);
 			path = VoiceOfAmericaTests;
+			sourceTree = "<group>";
+		};
+		B2AFB166234ED0D900F14B4C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				B2AFB162234ECC7500F14B4C /* FlowCoordinator.swift */,
+				B2AFB164234ECEB800F14B4C /* CoordinatorDelegate.swift */,
+				B2AFB160234ECBE700F14B4C /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B2AFB167234ED10500F14B4C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2AFB142234EC52E00F14B4C /* VoteViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B2AFB168234ED12C00F14B4C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				B2AFB140234EC52E00F14B4C /* AppDelegate.swift */,
+				B2AFB149234EC52F00F14B4C /* LaunchScreen.storyboard */,
+				B2AFB147234EC52F00F14B4C /* Assets.xcassets */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +209,6 @@
 			files = (
 				B2AFB14B234EC52F00F14B4C /* LaunchScreen.storyboard in Resources */,
 				B2AFB148234EC52F00F14B4C /* Assets.xcassets in Resources */,
-				B2AFB146234EC52E00F14B4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2AFB143234EC52E00F14B4C /* ViewController.swift in Sources */,
+				B2AFB163234ECC7500F14B4C /* FlowCoordinator.swift in Sources */,
+				B2AFB143234EC52E00F14B4C /* VoteViewController.swift in Sources */,
 				B2AFB141234EC52E00F14B4C /* AppDelegate.swift in Sources */,
+				B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */,
+				B2AFB161234ECBE700F14B4C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +253,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2AFB144234EC52E00F14B4C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2AFB145234EC52E00F14B4C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B2AFB149234EC52F00F14B4C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
