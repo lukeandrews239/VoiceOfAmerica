@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>925118976518-bgr6dfquvut69jcnvt98dbmc82pt0uul.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.925118976518-bgr6dfquvut69jcnvt98dbmc82pt0uul</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBTwfEccYWNOJH0emUX890-cR68m1QiExY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>925118976518</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.landrews.VoiceOfAmerica</string>
+	<key>PROJECT_ID</key>
+	<string>voiceofamerica-e1c84</string>
+	<key>STORAGE_BUCKET</key>
+	<string>voiceofamerica-e1c84.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:925118976518:ios:1da72b46b5d86242c6e987</string>
+	<key>DATABASE_URL</key>
+	<string>https://voiceofamerica-e1c84.firebaseio.com</string>
+</dict>
+</plist>

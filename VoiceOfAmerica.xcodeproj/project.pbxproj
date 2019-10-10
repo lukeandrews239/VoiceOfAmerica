@@ -3,11 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		591D3C6992A6753A9D7AB0F3 /* Pods_VoiceOfAmerica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DAA91F3EAEBBF7E4E084E4A /* Pods_VoiceOfAmerica.framework */; };
+		6B0CFE5A616208D84243595C /* libPods-VoiceOfAmericaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5448E2D2187EFAAD5C592 /* libPods-VoiceOfAmericaTests.a */; };
+		B2520177234F959D00D6ED47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2520176234F959D00D6ED47 /* GoogleService-Info.plist */; };
+		B252017A234F9D9600D6ED47 /* ControlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2520179234F9D9600D6ED47 /* ControlManager.swift */; };
+		B252017C234F9E0F00D6ED47 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252017B234F9E0F00D6ED47 /* DataManager.swift */; };
 		B2AFB141234EC52E00F14B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB140234EC52E00F14B4C /* AppDelegate.swift */; };
 		B2AFB143234EC52E00F14B4C /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB142234EC52E00F14B4C /* VoteViewController.swift */; };
 		B2AFB148234EC52F00F14B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AFB147234EC52F00F14B4C /* Assets.xcassets */; };
@@ -16,9 +20,6 @@
 		B2AFB161234ECBE700F14B4C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB160234ECBE700F14B4C /* Coordinator.swift */; };
 		B2AFB163234ECC7500F14B4C /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB162234ECC7500F14B4C /* FlowCoordinator.swift */; };
 		B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB164234ECEB800F14B4C /* CoordinatorDelegate.swift */; };
-
-		FC7FA5A142BF0711742A0811 /* Pods_VoiceOfAmericaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B173801918AC52686E430A9 /* Pods_VoiceOfAmericaTests.framework */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,10 @@
 /* Begin PBXFileReference section */
 		28C9F1A026FF373FB42F9C2F /* Pods-VoiceOfAmerica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmerica.debug.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica.debug.xcconfig"; sourceTree = "<group>"; };
 		49CE3EB63E7B608CB2362EC7 /* Pods-VoiceOfAmericaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmericaTests.release.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmericaTests/Pods-VoiceOfAmericaTests.release.xcconfig"; sourceTree = "<group>"; };
-		5B173801918AC52686E430A9 /* Pods_VoiceOfAmericaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceOfAmericaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DAA91F3EAEBBF7E4E084E4A /* Pods_VoiceOfAmerica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceOfAmerica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2520176234F959D00D6ED47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B2520179234F9D9600D6ED47 /* ControlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManager.swift; sourceTree = "<group>"; };
+		B252017B234F9E0F00D6ED47 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B2AFB13D234EC52E00F14B4C /* VoiceOfAmerica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceOfAmerica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AFB140234EC52E00F14B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2AFB142234EC52E00F14B4C /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
@@ -48,8 +51,8 @@
 		B2AFB160234ECBE700F14B4C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B2AFB162234ECC7500F14B4C /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		B2AFB164234ECEB800F14B4C /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
-
 		BE6304F41493793BF5CFC036 /* Pods-VoiceOfAmericaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmericaTests.debug.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmericaTests/Pods-VoiceOfAmericaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C9A5448E2D2187EFAAD5C592 /* libPods-VoiceOfAmericaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoiceOfAmericaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3561AF5756B013703F17F1 /* Pods-VoiceOfAmerica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmerica.release.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC7FA5A142BF0711742A0811 /* Pods_VoiceOfAmericaTests.framework in Frameworks */,
+				6B0CFE5A616208D84243595C /* libPods-VoiceOfAmericaTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				9DAA91F3EAEBBF7E4E084E4A /* Pods_VoiceOfAmerica.framework */,
-				5B173801918AC52686E430A9 /* Pods_VoiceOfAmericaTests.framework */,
+				C9A5448E2D2187EFAAD5C592 /* libPods-VoiceOfAmericaTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,8 +93,16 @@
 				BE6304F41493793BF5CFC036 /* Pods-VoiceOfAmericaTests.debug.xcconfig */,
 				49CE3EB63E7B608CB2362EC7 /* Pods-VoiceOfAmericaTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B2520178234F9D7900D6ED47 /* DataManagement */ = {
+			isa = PBXGroup;
+			children = (
+				B2520179234F9D9600D6ED47 /* ControlManager.swift */,
+				B252017B234F9E0F00D6ED47 /* DataManager.swift */,
+			);
+			path = DataManagement;
 			sourceTree = "<group>";
 		};
 		B2AFB134234EC52D00F14B4C = {
@@ -117,6 +128,8 @@
 		B2AFB13F234EC52E00F14B4C /* VoiceOfAmerica */ = {
 			isa = PBXGroup;
 			children = (
+				B2520178234F9D7900D6ED47 /* DataManagement */,
+				B2520176234F959D00D6ED47 /* GoogleService-Info.plist */,
 				B2AFB168234ED12C00F14B4C /* Other */,
 				B2AFB167234ED10500F14B4C /* ViewControllers */,
 				B2AFB166234ED0D900F14B4C /* Coordinators */,
@@ -248,6 +261,7 @@
 			files = (
 				B2AFB14B234EC52F00F14B4C /* LaunchScreen.storyboard in Resources */,
 				B2AFB148234EC52F00F14B4C /* Assets.xcassets in Resources */,
+				B2520177234F959D00D6ED47 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +346,10 @@
 				B2AFB163234ECC7500F14B4C /* FlowCoordinator.swift in Sources */,
 				B2AFB143234EC52E00F14B4C /* VoteViewController.swift in Sources */,
 				B2AFB141234EC52E00F14B4C /* AppDelegate.swift in Sources */,
+				B252017C234F9E0F00D6ED47 /* DataManager.swift in Sources */,
 				B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */,
 				B2AFB161234ECBE700F14B4C /* Coordinator.swift in Sources */,
+				B252017A234F9D9600D6ED47 /* ControlManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
