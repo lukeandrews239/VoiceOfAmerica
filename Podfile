@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+# platform :ios, '12.2'
 
 target 'VoiceOfAmerica' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -8,10 +8,11 @@ target 'VoiceOfAmerica' do
   # Pods for VoiceOfAmerica
   pod 'Anchorage'
   pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
+end
 
-  target 'VoiceOfAmericaTests' do
-    inherit! :search_paths
+target 'VoiceOfAmericaTests' do
     # Pods for testing
-  end
-
 end

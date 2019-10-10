@@ -10,12 +10,17 @@ import UIKit
 
 class VoteViewController: UIViewController {
 
+    var controlManager: ControlManager = ControlManager.shared()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "VOICE OF AMERICA"
         // Sample red color to demonstrate architecture completeness
         self.view.backgroundColor = UIColor.red
-        // Do any additional setup after loading the view.
+        // Try adding a new entry to the server! Prints the response in terminal
+        controlManager.addNewPrimaryEntry(entry: "Test") { reference in
+            print(reference)
+        }
     }
 
 
