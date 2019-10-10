@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  VoteViewController.swift
 //  VoiceOfAmerica
 //
 //  Created by Luke Andrews on 10/9/19.
@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class VoteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "VOICE OF AMERICA"
+        // Sample red color to demonstrate architecture completeness
+        self.view.backgroundColor = UIColor.red
         // Do any additional setup after loading the view.
     }
 
