@@ -32,13 +32,6 @@ class FlowCoordinator: Coordinator {
 
 extension FlowCoordinator: CoordinatorDelegate {
     func didVote(candidate: String) {
-        let shared = ControlManager.shared()
-        shared.addNewPrimaryEntry(entry: candidate) { (result) in
-            if let result = result {
-                print(result)
-            } else {
-                print("we fucked")
-            }
-        }
+        //TODOluke
     }
 }

@@ -30,7 +30,7 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         layoutViews()
     }
 
-    func vote(candidate: String) {
+    @objc func vote(candidate: String) {
         delegate?.didVote(candidate: candidate)
     }
 

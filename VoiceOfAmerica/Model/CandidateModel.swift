@@ -42,10 +42,8 @@ class CandidateModel {
             for entry in candidateData {
                 if let name = entry.key as? String, let voteTally = entry.value as? Int {
                     // TODOisaak: we need to get correct bio and images here
-                    guard let bio = weakSelf.data[name] else {
-                        fatalError("The database is inconsistant with the local source of truth")
-                    }
-                    weakSelf.candidates.append(Candidate(name: name, bio: bio, face: UIImageView(), votes: voteTally))
+                    let bio = weakSelf.data[name]
+                    weakSelf.candidates.append(Candidate(name: name, bio: bio ?? "Dic/Server mismatch", face: UIImageView(), votes: voteTally))
                 }
             }
         }))
