@@ -35,3 +35,12 @@ struct Candidate {
         self.votes = votes
     }
 }
+
+extension CandidateModel: CandidateDelegate {
+
+    func getNumCandidates() -> Int {
+        return candidates.count
+    }
+}
+
+    

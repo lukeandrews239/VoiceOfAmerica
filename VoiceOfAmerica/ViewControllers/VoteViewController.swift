@@ -11,9 +11,9 @@ import Anchorage
 
 class VoteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    // Instance of model.
-    // We could also use delegate pattern to link these together. Could be good.
-    let candidateModel = CandidateModel()
+    weak var delegate: CoordinatorDelegate?
+
+    weak var model: CandidateDelegate?
 
     var candidateCell = UITableViewCell()
 
@@ -30,14 +30,18 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Sample red color to demonstrate architecture completeness
         self.view.backgroundColor = UIColor.white
         // Try adding a new entry to the server! Prints the response in terminal
-        controlManager.addNewPrimaryEntry(entry: "Test") { reference in
-            print(reference.debugDescription)
-        }
+        // controlManager.addNewPrimaryEntry(entry: "Test") { reference in
+        //     print(reference.debugDescription)
+        // }
         layoutViews()
     }
 
+    func vote(candidate: String) {
+        delegate?.didVote(candidate: candidate)
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return candidateModel.candidates.count
+        return model?.getNumCandidates() ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
