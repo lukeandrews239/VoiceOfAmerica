@@ -11,11 +11,9 @@ import Anchorage
 
 class VoteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    // Instance of model.
-    // We could also use delegate pattern to link these together. Could be good.
-    let candidateModel = CandidateModel()
+    weak var delegate: CoordinatorDelegate?
 
-    var candidateCell = UITableViewCell()
+    weak var model: CandidateDelegate?
 
     let tableView: UITableView = {
         let table = UITableView()
@@ -32,12 +30,18 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         layoutViews()
     }
 
+    @objc func vote(candidate: String) {
+        delegate?.didVote(candidate: candidate)
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return candidateModel.candidates.count
+        return model?.getNumCandidates() ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = candidateCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInitialCell.identifier) else {
+            fatalError("Cannot create cell, check tableView configuration")
+        }
         // do some shit to it
         return cell
     }

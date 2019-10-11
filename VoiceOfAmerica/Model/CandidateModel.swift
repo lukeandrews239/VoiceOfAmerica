@@ -14,6 +14,8 @@ class CandidateModel {
 
     private let controlSingleton = ControlManager.shared()
 
+    private let data = CandidatesDataSource.generateCandidates()
+
     init() {
         makeCandidates()
     }
@@ -40,7 +42,8 @@ class CandidateModel {
             for entry in candidateData {
                 if let name = entry.key as? String, let voteTally = entry.value as? Int {
                     // TODOisaak: we need to get correct bio and images here
-                    weakSelf.candidates.append(Candidate(name: name, bio: "", face: UIImageView(), votes: voteTally))
+                    let bio = weakSelf.data[name]
+                    weakSelf.candidates.append(Candidate(name: name, bio: bio ?? "Dic/Server mismatch", face: UIImageView(), votes: voteTally))
                 }
             }
         }))
@@ -53,6 +56,7 @@ struct Candidate {
     var face: UIImageView
     var votes: Int
 
+
     init(name: String, bio: String, face: UIImageView, votes:Int) {
         self.name = name
         self.bio = bio
@@ -60,3 +64,12 @@ struct Candidate {
         self.votes = votes
     }
 }
+
+extension CandidateModel: CandidateDelegate {
+
+    func getNumCandidates() -> Int {
+        return candidates.count
+    }
+}
+
+    
