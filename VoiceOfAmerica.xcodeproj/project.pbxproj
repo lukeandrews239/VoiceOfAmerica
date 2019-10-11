@@ -22,6 +22,7 @@
 		B2AFB163234ECC7500F14B4C /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB162234ECC7500F14B4C /* FlowCoordinator.swift */; };
 		B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB164234ECEB800F14B4C /* CoordinatorDelegate.swift */; };
 		FF24EC9B2350E615006EB319 /* CandidateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24EC9A2350E615006EB319 /* CandidateProtocol.swift */; };
+		FF9F62D42350FD4D00ACCADD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF9F62D32350FD4D00ACCADD /* Images.xcassets */; };
 		FFAAACF5235020E4003BF70E /* CandidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAAACF4235020E4003BF70E /* CandidateModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		C9A5448E2D2187EFAAD5C592 /* libPods-VoiceOfAmericaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoiceOfAmericaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3561AF5756B013703F17F1 /* Pods-VoiceOfAmerica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmerica.release.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica.release.xcconfig"; sourceTree = "<group>"; };
 		FF24EC9A2350E615006EB319 /* CandidateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateProtocol.swift; sourceTree = "<group>"; };
+		FF9F62D32350FD4D00ACCADD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FFAAACF4235020E4003BF70E /* CandidateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 				FFAAACF3235020C3003BF70E /* Model */,
 				B2520178234F9D7900D6ED47 /* DataManagement */,
 				B2520176234F959D00D6ED47 /* GoogleService-Info.plist */,
+				FF9F62D32350FD4D00ACCADD /* Images.xcassets */,
 				B2AFB168234ED12C00F14B4C /* Other */,
 				B2AFB167234ED10500F14B4C /* ViewControllers */,
 				B2AFB166234ED0D900F14B4C /* Coordinators */,
@@ -278,6 +281,7 @@
 			files = (
 				B2AFB14B234EC52F00F14B4C /* LaunchScreen.storyboard in Resources */,
 				B2AFB148234EC52F00F14B4C /* Assets.xcassets in Resources */,
+				FF9F62D42350FD4D00ACCADD /* Images.xcassets in Resources */,
 				B2520177234F959D00D6ED47 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
