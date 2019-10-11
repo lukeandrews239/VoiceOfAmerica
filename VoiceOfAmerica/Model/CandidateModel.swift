@@ -20,15 +20,6 @@ class CandidateModel {
     func makeCandidates() {
         // this is where we create the entire model.
         // we're going to need to get the votes here somehow.
-        for i in 0..<candidateDataSource.count {
-            let name = candidateDataSource[i]
-            let bio = "Placeholder bio" // hardcoded?
-            let votes = 0 // get votes per candidate here
-            let face = UIImage(named: "trump-face")  // placeholder image
-            let faceView = UIImageView(image: face)
-            let candidate = Candidate(name: name, bio: bio, face: faceView, votes: votes)
-            candidates.append(candidate)
-        }
     }
 }
 

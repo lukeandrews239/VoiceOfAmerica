@@ -15,8 +15,6 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     weak var model: CandidateDelegate?
 
-    var candidateCell = UITableViewCell()
-
     let tableView: UITableView = {
         let table = UITableView()
         return table
@@ -45,7 +43,9 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = candidateCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInitialCell.identifier) else {
+            fatalError("Cannot create cell, check tableView configuration")
+        }
         // do some shit to it
         return cell
     }

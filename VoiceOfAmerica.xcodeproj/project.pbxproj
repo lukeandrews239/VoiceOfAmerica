@@ -23,6 +23,8 @@
 		B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB164234ECEB800F14B4C /* CoordinatorDelegate.swift */; };
 		FF24EC9B2350E615006EB319 /* CandidateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF24EC9A2350E615006EB319 /* CandidateProtocol.swift */; };
 		FF9F62D42350FD4D00ACCADD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF9F62D32350FD4D00ACCADD /* Images.xcassets */; };
+		FF9F62D6235107C300ACCADD /* CandidateInitialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F62D5235107C300ACCADD /* CandidateInitialCell.swift */; };
+		FF9F62D82351172300ACCADD /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F62D72351172300ACCADD /* Fonts.swift */; };
 		FFAAACF5235020E4003BF70E /* CandidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAAACF4235020E4003BF70E /* CandidateModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,8 @@
 		EE3561AF5756B013703F17F1 /* Pods-VoiceOfAmerica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmerica.release.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica.release.xcconfig"; sourceTree = "<group>"; };
 		FF24EC9A2350E615006EB319 /* CandidateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateProtocol.swift; sourceTree = "<group>"; };
 		FF9F62D32350FD4D00ACCADD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FF9F62D5235107C300ACCADD /* CandidateInitialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateInitialCell.swift; sourceTree = "<group>"; };
+		FF9F62D72351172300ACCADD /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		FFAAACF4235020E4003BF70E /* CandidateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 				B2AFB167234ED10500F14B4C /* ViewControllers */,
 				B2AFB166234ED0D900F14B4C /* Coordinators */,
 				B2AFB14C234EC52F00F14B4C /* Info.plist */,
+				FF9F62D72351172300ACCADD /* Fonts.swift */,
 			);
 			path = VoiceOfAmerica;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				B2AFB142234EC52E00F14B4C /* VoteViewController.swift */,
+				FF9F62D5235107C300ACCADD /* CandidateInitialCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -366,7 +372,9 @@
 			files = (
 				B2AFB163234ECC7500F14B4C /* FlowCoordinator.swift in Sources */,
 				B2AFB143234EC52E00F14B4C /* VoteViewController.swift in Sources */,
+				FF9F62D6235107C300ACCADD /* CandidateInitialCell.swift in Sources */,
 				B2AFB141234EC52E00F14B4C /* AppDelegate.swift in Sources */,
+				FF9F62D82351172300ACCADD /* Fonts.swift in Sources */,
 				B252017C234F9E0F00D6ED47 /* DataManager.swift in Sources */,
 				B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */,
 				B2ACD7AD2350DFC3001A668F /* CandidatesDataSource.swift in Sources */,
