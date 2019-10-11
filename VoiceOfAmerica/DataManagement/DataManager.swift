@@ -18,8 +18,16 @@ class DataManager {
     // Callback provided by Firebase TODOluke: Add error handling
     typealias FirebaseCompletion = (_ error: Error?, _ ref: DatabaseReference?) -> ()
 
+    // Request typealias
+    typealias FirebaseSnapshot = (DataSnapshot) -> ()
+
     // Takes a completion block for execution upon reception of command response
     func addNewPrimaryEntry(entryData: String, completion: @escaping FirebaseCompletion) {
         databaseReference.setValue(entryData, withCompletionBlock: completion)
+    }
+
+    // Get the current state of all candidates
+    func getCurrentStateValues(completion: @escaping FirebaseSnapshot) {
+        databaseReference.child("PresidentialCandidates").observeSingleEvent(of: .value, with: completion)
     }
 }
