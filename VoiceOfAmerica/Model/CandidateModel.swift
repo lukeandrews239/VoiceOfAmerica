@@ -20,21 +20,30 @@ class CandidateModel {
 
     func makeCandidates() {
         var candidateData: NSDictionary = NSDictionary()
+        let group = DispatchGroup()
+        group.enter()
         controlSingleton.getCurrentStateValues { (response: NSDictionary?) in
             if let packet = response {
                 candidateData = packet
+                group.leave()
             } else {
                 // Request failed, TODOluke error alert for bad network connection
                 print(response ?? "Failed request")
+                group.leave()
                 return
             }
         }
-        for entry in candidateData {
-            if let name = entry.key as? String, let voteTally = entry.value as? Int {
-                // TODOisaak: we need to get correct bio and images here
-                candidates.append(Candidate(name: name, bio: "", face: UIImageView(), votes: voteTally))
+        group.notify(queue: .main, work: DispatchWorkItem(block: { [weak self] in
+            guard let weakSelf = self else {
+                return
             }
-        }
+            for entry in candidateData {
+                if let name = entry.key as? String, let voteTally = entry.value as? Int {
+                    // TODOisaak: we need to get correct bio and images here
+                    weakSelf.candidates.append(Candidate(name: name, bio: "", face: UIImageView(), votes: voteTally))
+                }
+            }
+        }))
     }
 }
 

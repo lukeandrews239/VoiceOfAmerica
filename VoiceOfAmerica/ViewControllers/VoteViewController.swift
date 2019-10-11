@@ -29,15 +29,6 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationItem.title = "VOICE OF AMERICA"
         // Sample red color to demonstrate architecture completeness
         self.view.backgroundColor = UIColor.white
-        // Test request success
-        controlManager.getCurrentStateValues { (response: NSDictionary?) in
-            if let packet = response {
-                print("Server response: ")
-                print(packet)
-            } else {
-                print("Failure")
-            }
-        }
         layoutViews()
     }
 
