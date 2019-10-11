@@ -14,6 +14,8 @@ class CandidateModel {
 
     private let controlSingleton = ControlManager.shared()
 
+    private let data = CandidatesDataSource.generateCandidates()
+
     init() {
         makeCandidates()
     }
@@ -40,7 +42,10 @@ class CandidateModel {
             for entry in candidateData {
                 if let name = entry.key as? String, let voteTally = entry.value as? Int {
                     // TODOisaak: we need to get correct bio and images here
-                    weakSelf.candidates.append(Candidate(name: name, bio: "", face: UIImageView(), votes: voteTally))
+                    guard let bio = weakSelf.data[name] else {
+                        fatalError("The database is inconsistant with the local source of truth")
+                    }
+                    weakSelf.candidates.append(Candidate(name: name, bio: bio, face: UIImageView(), votes: voteTally))
                 }
             }
         }))
