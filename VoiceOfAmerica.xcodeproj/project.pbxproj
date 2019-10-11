@@ -20,6 +20,7 @@
 		B2AFB161234ECBE700F14B4C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB160234ECBE700F14B4C /* Coordinator.swift */; };
 		B2AFB163234ECC7500F14B4C /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB162234ECC7500F14B4C /* FlowCoordinator.swift */; };
 		B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB164234ECEB800F14B4C /* CoordinatorDelegate.swift */; };
+		FFAAACF5235020E4003BF70E /* CandidateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAAACF4235020E4003BF70E /* CandidateModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		BE6304F41493793BF5CFC036 /* Pods-VoiceOfAmericaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmericaTests.debug.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmericaTests/Pods-VoiceOfAmericaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9A5448E2D2187EFAAD5C592 /* libPods-VoiceOfAmericaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoiceOfAmericaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE3561AF5756B013703F17F1 /* Pods-VoiceOfAmerica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmerica.release.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica.release.xcconfig"; sourceTree = "<group>"; };
+		FFAAACF4235020E4003BF70E /* CandidateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		B2AFB13F234EC52E00F14B4C /* VoiceOfAmerica */ = {
 			isa = PBXGroup;
 			children = (
+				FFAAACF3235020C3003BF70E /* Model */,
 				B2520178234F9D7900D6ED47 /* DataManagement */,
 				B2520176234F959D00D6ED47 /* GoogleService-Info.plist */,
 				B2AFB168234ED12C00F14B4C /* Other */,
@@ -173,6 +176,14 @@
 				B2AFB147234EC52F00F14B4C /* Assets.xcassets */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		FFAAACF3235020C3003BF70E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFAAACF4235020E4003BF70E /* CandidateModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +359,7 @@
 				B2AFB141234EC52E00F14B4C /* AppDelegate.swift in Sources */,
 				B252017C234F9E0F00D6ED47 /* DataManager.swift in Sources */,
 				B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */,
+				FFAAACF5235020E4003BF70E /* CandidateModel.swift in Sources */,
 				B2AFB161234ECBE700F14B4C /* Coordinator.swift in Sources */,
 				B252017A234F9D9600D6ED47 /* ControlManager.swift in Sources */,
 			);
