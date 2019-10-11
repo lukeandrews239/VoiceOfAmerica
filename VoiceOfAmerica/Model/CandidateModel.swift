@@ -32,6 +32,6 @@ struct Candidate {
         self.name = name
         self.bio = bio
         self.face = face
-        self.votes = 0
+        self.votes = votes
     }
 }

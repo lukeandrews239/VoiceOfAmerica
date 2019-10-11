@@ -31,7 +31,6 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.backgroundColor = UIColor.white
         // Try adding a new entry to the server! Prints the response in terminal
         controlManager.addNewPrimaryEntry(entry: "Test") { reference in
-            // We shouldn't unwrap but the warning is annoying
             print(reference.debugDescription)
         }
         layoutViews()
