@@ -10,15 +10,40 @@ import UIKit
 import Foundation
 
 class CandidateModel {
-    let candidates = [Candidate]()
+    var candidates = [Candidate]()
+
+    private let controlSingleton = ControlManager.shared()
 
     init() {
         makeCandidates()
     }
 
     func makeCandidates() {
-        // this is where we create the entire model.
-        // we're going to need to get the votes here somehow.
+        var candidateData: NSDictionary = NSDictionary()
+        let group = DispatchGroup()
+        group.enter()
+        controlSingleton.getCurrentStateValues { (response: NSDictionary?) in
+            if let packet = response {
+                candidateData = packet
+                group.leave()
+            } else {
+                // Request failed, TODOluke error alert for bad network connection
+                print(response ?? "Failed request")
+                group.leave()
+                return
+            }
+        }
+        group.notify(queue: .main, work: DispatchWorkItem(block: { [weak self] in
+            guard let weakSelf = self else {
+                return
+            }
+            for entry in candidateData {
+                if let name = entry.key as? String, let voteTally = entry.value as? Int {
+                    // TODOisaak: we need to get correct bio and images here
+                    weakSelf.candidates.append(Candidate(name: name, bio: "", face: UIImageView(), votes: voteTally))
+                }
+            }
+        }))
     }
 }
 
