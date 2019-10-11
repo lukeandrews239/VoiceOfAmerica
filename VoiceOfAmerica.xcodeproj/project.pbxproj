@@ -12,6 +12,7 @@
 		B2520177234F959D00D6ED47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2520176234F959D00D6ED47 /* GoogleService-Info.plist */; };
 		B252017A234F9D9600D6ED47 /* ControlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2520179234F9D9600D6ED47 /* ControlManager.swift */; };
 		B252017C234F9E0F00D6ED47 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252017B234F9E0F00D6ED47 /* DataManager.swift */; };
+		B2ACD7AD2350DFC3001A668F /* CandidatesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2ACD7AC2350DFC3001A668F /* CandidatesDataSource.swift */; };
 		B2AFB141234EC52E00F14B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB140234EC52E00F14B4C /* AppDelegate.swift */; };
 		B2AFB143234EC52E00F14B4C /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFB142234EC52E00F14B4C /* VoteViewController.swift */; };
 		B2AFB148234EC52F00F14B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AFB147234EC52F00F14B4C /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		B2520176234F959D00D6ED47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2520179234F9D9600D6ED47 /* ControlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManager.swift; sourceTree = "<group>"; };
 		B252017B234F9E0F00D6ED47 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B2ACD7AC2350DFC3001A668F /* CandidatesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidatesDataSource.swift; sourceTree = "<group>"; };
 		B2AFB13D234EC52E00F14B4C /* VoiceOfAmerica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceOfAmerica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AFB140234EC52E00F14B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2AFB142234EC52E00F14B4C /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				FFAAACF4235020E4003BF70E /* CandidateModel.swift */,
 				FF24EC9A2350E615006EB319 /* CandidateProtocol.swift */,
+				B2ACD7AC2350DFC3001A668F /* CandidatesDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				B2AFB141234EC52E00F14B4C /* AppDelegate.swift in Sources */,
 				B252017C234F9E0F00D6ED47 /* DataManager.swift in Sources */,
 				B2AFB165234ECEB800F14B4C /* CoordinatorDelegate.swift in Sources */,
+				B2ACD7AD2350DFC3001A668F /* CandidatesDataSource.swift in Sources */,
 				FFAAACF5235020E4003BF70E /* CandidateModel.swift in Sources */,
 				B2AFB161234ECBE700F14B4C /* Coordinator.swift in Sources */,
 				FF24EC9B2350E615006EB319 /* CandidateProtocol.swift in Sources */,
