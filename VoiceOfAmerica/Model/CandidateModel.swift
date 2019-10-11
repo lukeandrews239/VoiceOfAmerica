@@ -10,15 +10,31 @@ import UIKit
 import Foundation
 
 class CandidateModel {
-    let candidates = [Candidate]()
+    var candidates = [Candidate]()
+
+    private let controlSingleton = ControlManager.shared()
 
     init() {
         makeCandidates()
     }
 
     func makeCandidates() {
-        // this is where we create the entire model.
-        // we're going to need to get the votes here somehow.
+        var candidateData: NSDictionary = NSDictionary()
+        controlSingleton.getCurrentStateValues { (response: NSDictionary?) in
+            if let packet = response {
+                candidateData = packet
+            } else {
+                // Request failed, TODOluke error alert for bad network connection
+                print(response ?? "Failed request")
+                return
+            }
+        }
+        for entry in candidateData {
+            if let name = entry.key as? String, let voteTally = entry.value as? Int {
+                // TODOisaak: we need to get correct bio and images here
+                candidates.append(Candidate(name: name, bio: "", face: UIImageView(), votes: voteTally))
+            }
+        }
     }
 }
 

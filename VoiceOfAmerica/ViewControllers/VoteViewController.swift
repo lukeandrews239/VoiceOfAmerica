@@ -29,9 +29,14 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationItem.title = "VOICE OF AMERICA"
         // Sample red color to demonstrate architecture completeness
         self.view.backgroundColor = UIColor.white
-        // Try adding a new entry to the server! Prints the response in terminal
-        controlManager.addNewPrimaryEntry(entry: "Test") { reference in
-            print(reference.debugDescription)
+        // Test request success
+        controlManager.getCurrentStateValues { (response: NSDictionary?) in
+            if let packet = response {
+                print("Server response: ")
+                print(packet)
+            } else {
+                print("Failure")
+            }
         }
         layoutViews()
     }
