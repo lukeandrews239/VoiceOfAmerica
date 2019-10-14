@@ -8,6 +8,7 @@ target 'VoiceOfAmerica' do
   # Pods for VoiceOfAmerica
   pod 'Anchorage'
   pod 'Firebase'
+  pod 'BonMot'
   pod 'Firebase/Core'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'

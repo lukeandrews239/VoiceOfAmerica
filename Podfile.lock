@@ -1,5 +1,6 @@
 PODS:
   - Anchorage (4.3.1)
+  - BonMot (5.4.1)
   - Firebase (6.10.0):
     - Firebase/Core (= 6.10.0)
   - Firebase/Core (6.10.0):
@@ -85,6 +86,7 @@ PODS:
 
 DEPENDENCIES:
   - Anchorage
+  - BonMot
   - Firebase
   - Firebase/Core
   - Firebase/Database
@@ -93,6 +95,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Anchorage
+    - BonMot
     - Firebase
     - FirebaseAnalytics
     - FirebaseAuthInterop
@@ -112,6 +115,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Anchorage: a187da0bc9b07440637d42c8744b8c82a4490295
+  BonMot: aa82119ff2ffa184223d8a31c72aed84fbb009e0
   Firebase: 5e6b7b12bf9adb90986688edc06b156c37e109cd
   FirebaseAnalytics: 0e3ecff2c5d86070f7d4325e21f1edabfbd558dc
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -129,6 +133,6 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: d2e5d134afc7cf72c95f81e4ba940599e8838817
+PODFILE CHECKSUM: 0e937cbe9ffceb5bae6a1823e0c8506cee619574
 
 COCOAPODS: 1.8.3
