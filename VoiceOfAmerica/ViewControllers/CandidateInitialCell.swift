@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BonMot
 import Foundation
 
 final class CandidateInitialCell: UITableViewCell {
@@ -15,35 +16,23 @@ final class CandidateInitialCell: UITableViewCell {
 
     var nameText: String = "" {
         didSet {
-            let attributeString = NSAttributedString(string: nameText, attributes:
-                [.font: Fonts.primaryText,
-                 .foregroundColor: UIColor.white,
-                 .kern: 0.03])
-
-            nameLabel.attributedText = attributeString
+            nameLabel.attributedText = nameText.styled(with:.font(Fonts.primaryText),.alignment(.center))
         }
     }
 
     var bioText: String = "" {
         didSet {
-            let attributeString = NSAttributedString(string: nameText, attributes:
-                [.font: Fonts.secondaryText,
-                 .foregroundColor: UIColor.white,
-                 .kern: 0.03])
-
-            bioLabel.attributedText = attributeString
+            bioLabel.attributedText = bioText.styled(with:.font(Fonts.secondaryText),.alignment(.center))
         }
     }
 
     private let nameLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.textAlignment = .center
         return label
     }()
 
     private let bioLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.textAlignment = .center
         return label
     }()
 
