@@ -17,13 +17,14 @@ final class CandidateInitialCell: UITableViewCell {
 
     var nameText: String = "" {
         didSet {
-            nameLabel.attributedText = nameText.styled(with:.font(Fonts.primaryText),.alignment(.left))
+            nameLabel.attributedText = nameText.styled(with:.font(Fonts.primaryText),.alignment(.left), .lineBreakMode(.byWordWrapping))
         }
     }
 
     var bioText: String = "" {
         didSet {
-            bioLabel.attributedText = bioText.styled(with:.font(Fonts.secondaryText),.alignment(.left))
+            bioLabel.attributedText = bioText.styled(with:.font(Fonts.secondaryText),.alignment(.left), .lineBreakMode(.byWordWrapping))
+            bioLabel.numberOfLines = 0
         }
     }
 
@@ -60,6 +61,7 @@ final class CandidateInitialCell: UITableViewCell {
         stack.spacing = 3
         stack.alignment = .fill
         return stack
+
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -80,7 +82,7 @@ extension CandidateInitialCell {
         // Style
 
         // Layout
-        nameStack.centerXAnchor == contentView.centerXAnchor
         nameStack.centerYAnchor == contentView.centerYAnchor
+        nameStack.leadingAnchor == contentView.leadingAnchor + 20
     }
 }

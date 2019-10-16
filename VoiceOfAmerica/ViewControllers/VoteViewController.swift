@@ -15,6 +15,8 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     weak var model: CandidateDelegate?
 
+    var candidates = [Candidate]()
+
     let tableView: UITableView = {
         let table = UITableView()
         return table
@@ -35,17 +37,24 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model?.getNumCandidates() ?? 1
+        return candidates.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInitialCell.identifier) as! CandidateInitialCell
-        cell.nameText = "Donald Trump"
-        cell.bioText = "The 45th President of the United States of America"
+        cell.nameText = candidates[indexPath.row].getName()
+        cell.bioText = candidates[indexPath.row].bio
         // do some shit to it
         return cell
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 
     func layoutViews() {
         // Hierarchy
@@ -60,6 +69,11 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Layout
         tableView.edgeAnchors == safeAreaGuide.edgeAnchors
 
+    }
+
+    func refreshData() {
+        self.candidates = model?.getCandidates() ?? [Candidate]()
+        tableView.reloadData()
     }
 }
 

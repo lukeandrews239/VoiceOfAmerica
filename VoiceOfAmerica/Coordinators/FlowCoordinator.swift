@@ -14,6 +14,7 @@ class FlowCoordinator: Coordinator {
 
     var navigationController: UINavigationController
     var voteViewController: VoteViewController?
+    var model: CandidateModel?
 
     init(with controller: UINavigationController) {
         self.navigationController = controller
@@ -23,8 +24,10 @@ class FlowCoordinator: Coordinator {
     func start() {
         let voteVC = VoteViewController()
         let model = CandidateModel()
+        self.model = model
         voteVC.delegate = self
         voteVC.model = model
+        model.delegate = self
         self.voteViewController = voteVC
         self.navigationController.pushViewController(voteVC, animated: true)
     }
