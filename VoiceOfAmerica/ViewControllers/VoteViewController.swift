@@ -35,13 +35,13 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model?.getNumCandidates() ?? 0
+        return model?.getNumCandidates() ?? 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInitialCell.identifier) else {
-            fatalError("Cannot create cell, check tableView configuration")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInitialCell.identifier) as! CandidateInitialCell
+        cell.nameText = "Donald Trump"
+        cell.bioText = "The 45th President of the United States of America"
         // do some shit to it
         return cell
     }
@@ -51,6 +51,7 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Hierarchy
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(CandidateInitialCell.self, forCellReuseIdentifier: CandidateInitialCell.identifier)
         view.addSubview(tableView)
 
         // Style
