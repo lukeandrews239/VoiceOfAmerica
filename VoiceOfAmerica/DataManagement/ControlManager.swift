@@ -54,4 +54,18 @@ class ControlManager {
         }
         dataManager.getCurrentStateValues(completion: handler)
     }
+
+    // Make a transaction-protected vote for a candidate
+    func voteForCandidate(candidate: String, completion: @escaping (NSDictionary?) -> ()) {
+        let handler = { (committed: Bool, currentData: DataSnapshot?) in
+            if let packet = currentData?.value as? NSDictionary, committed {
+                // Successfully committed the vote to the backend
+                completion(packet)
+            } else {
+                // Failed to commit the vote
+                completion(nil)
+            }
+        }
+        dataManager.updateVoteParameterRequest(candidate: candidate, completion: handler)
+    }
 }

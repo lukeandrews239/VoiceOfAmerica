@@ -30,4 +30,36 @@ class DataManager {
     func getCurrentStateValues(completion: @escaping FirebaseSnapshot) {
         databaseReference.child("PresidentialCandidates").observeSingleEvent(of: .value, with: completion)
     }
+
+    // Request to update a value - exclusively used as a transaction parameter to prevent concurrent mutation requests
+    func updateVoteParameterRequest(candidate: String, completion: @escaping (Bool, DataSnapshot?) -> ()) {
+        databaseReference.child("PresidentialCandidates").runTransactionBlock({ (currentData: MutableData) -> TransactionResult in
+            var votes : Int?
+            if var candidates = currentData.value as? [String: AnyObject] {
+                candidates.forEach { entry in
+                    let (name, tally) = entry
+                    if name == candidate {
+                        if let currentVotes = tally as? Int {
+                            votes = currentVotes + 1
+                        } else {
+                            // TODOluke: add error handling (Transaction failure - unable to disambiguate vote tally)
+                        }
+                    }
+                }
+                if let newTally = votes {
+                    candidates[candidate] = newTally as AnyObject?
+                    currentData.value = candidates
+                }
+            }
+            return TransactionResult.success(withValue: currentData)
+        }) { (error: Error?, committed: Bool, snapshot: DataSnapshot?) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false, nil)
+            } else {
+                //TODOluke: could have failed to commit without throwing an error
+                completion(committed, snapshot)
+            }
+        }
+    }
 }

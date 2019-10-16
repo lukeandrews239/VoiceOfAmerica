@@ -27,6 +27,10 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationItem.title = "VOICE OF AMERICA"
         // Sample red color to demonstrate architecture completeness
         self.view.backgroundColor = UIColor.white
+        // Test vote for a candidate
+        controlManager.voteForCandidate(candidate: "Joe Walsh") { response in
+            print(response)
+        }
         layoutViews()
     }
 
