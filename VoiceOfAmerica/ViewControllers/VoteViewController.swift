@@ -11,7 +11,6 @@ import Anchorage
 
 class VoteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-
     weak var delegate: CoordinatorDelegate?
 
     weak var model: CandidateDelegate?

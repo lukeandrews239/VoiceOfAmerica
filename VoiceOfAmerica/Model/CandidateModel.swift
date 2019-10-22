@@ -48,7 +48,6 @@ class CandidateModel {
                     weakSelf.candidates.append(Candidate(name: name, bio: bio ?? "Dic/Server mismatch", face: UIImageView(), votes: voteTally))
                 }
             }
-            //
             weakSelf.delegate?.didFinishLoadingData()
         }))
     }
