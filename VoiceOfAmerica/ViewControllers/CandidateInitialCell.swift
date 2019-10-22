@@ -38,21 +38,18 @@ final class CandidateInitialCell: UITableViewCell {
         return label
     }()
 
-    private let circleImage: UIImage = {
+    private let circleImage: UIImageView = {
         var trump = UIImage(named: "donald-trump")
         var image = UIImageView(image: trump)
-        let layer = image.layer
-        layer.masksToBounds = true
-        layer.cornerRadius = trump!.size.width / 2
-        UIGraphicsBeginImageContext(image.bounds.size)
+        image.layer.masksToBounds = true
 
-        layer.render(in: UIGraphicsGetCurrentContext()!)
-        guard let roundedImage = UIGraphicsGetImageFromCurrentImageContext() else {
-            return trump!
-        }
-        UIGraphicsEndImageContext()
+        var desiredSide: CGFloat = 70
 
-        return roundedImage
+        image.layer.cornerRadius = desiredSide / 2
+        image.setContentHuggingPriority(.required, for: .horizontal)
+        image.setContentHuggingPriority(.required, for: .vertical)
+        image.sizeAnchors == CGSize(width: desiredSide, height: desiredSide)
+        return image
     }()
 
     private lazy var nameStack: UIStackView = {
@@ -61,7 +58,14 @@ final class CandidateInitialCell: UITableViewCell {
         stack.spacing = 3
         stack.alignment = .fill
         return stack
+    }()
 
+    private lazy var fullStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [circleImage, nameStack])
+        stack.axis = .horizontal
+        stack.spacing = 20
+        stack.alignment = .center
+        return stack
     }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -77,12 +81,13 @@ final class CandidateInitialCell: UITableViewCell {
 extension CandidateInitialCell {
     func configureViews() {
         // Heirarchy
-        contentView.addSubview(nameStack)
+        contentView.addSubview(fullStack)
 
         // Style
+        let safeAreaGuide = contentView.layoutMarginsGuide
 
         // Layout
-        nameStack.centerYAnchor == contentView.centerYAnchor
-        nameStack.leadingAnchor == contentView.leadingAnchor + 20
+        fullStack.edgeAnchors == safeAreaGuide.edgeAnchors
+
     }
 }

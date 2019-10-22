@@ -11,6 +11,7 @@ import Anchorage
 
 class VoteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+
     weak var delegate: CoordinatorDelegate?
 
     weak var model: CandidateDelegate?
@@ -46,14 +47,6 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.bioText = candidates[indexPath.row].bio
         // do some shit to it
         return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
 
     func layoutViews() {
