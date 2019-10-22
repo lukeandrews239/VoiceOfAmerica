@@ -64,7 +64,10 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func refreshData() {
-        self.candidates = model?.getCandidates() ?? [Candidate]()
+        if let newCandidates = model?.getCandidates() {
+                self.candidates = newCandidates
+                tableView.reloadData()
+        }
         tableView.reloadData()
     }
 }
