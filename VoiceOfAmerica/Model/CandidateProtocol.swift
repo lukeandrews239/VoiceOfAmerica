@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CandidateDelegate: AnyObject {
-    func getNumCandidates() -> Int
+    func getCandidates() -> [Candidate]
 }

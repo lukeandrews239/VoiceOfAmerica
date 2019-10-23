@@ -15,6 +15,8 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     weak var model: CandidateDelegate?
 
+    var candidates = [Candidate]()
+
     let tableView: UITableView = {
         let table = UITableView()
         return table
@@ -39,22 +41,22 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model?.getNumCandidates() ?? 0
+        return candidates.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInitialCell.identifier) else {
-            fatalError("Cannot create cell, check tableView configuration")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInitialCell.identifier) as! CandidateInitialCell
+        cell.nameText = candidates[indexPath.row].getName()
+        cell.bioText = candidates[indexPath.row].bio
         // do some shit to it
         return cell
     }
-
 
     func layoutViews() {
         // Hierarchy
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(CandidateInitialCell.self, forCellReuseIdentifier: CandidateInitialCell.identifier)
         view.addSubview(tableView)
 
         // Style
@@ -63,6 +65,14 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Layout
         tableView.edgeAnchors == safeAreaGuide.edgeAnchors
 
+    }
+
+    func refreshData() {
+        if let newCandidates = model?.getCandidates() {
+                self.candidates = newCandidates
+                tableView.reloadData()
+        }
+        tableView.reloadData()
     }
 }
 

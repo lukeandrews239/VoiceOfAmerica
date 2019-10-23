@@ -16,6 +16,8 @@ class CandidateModel {
 
     private let data = CandidatesDataSource.generateCandidates()
 
+    var delegate: CoordinatorDelegate?
+
     init() {
         makeCandidates()
     }
@@ -46,6 +48,7 @@ class CandidateModel {
                     weakSelf.candidates.append(Candidate(name: name, bio: bio ?? "Dic/Server mismatch", face: UIImageView(), votes: voteTally))
                 }
             }
+            weakSelf.delegate?.didFinishLoadingData()
         }))
     }
 }
@@ -63,13 +66,25 @@ struct Candidate {
         self.face = face
         self.votes = votes
     }
-}
 
-extension CandidateModel: CandidateDelegate {
+    func getName() -> String {
+        return name
+    }
 
-    func getNumCandidates() -> Int {
-        return candidates.count
+    func getVote() -> Int {
+        return votes
     }
 }
 
+extension CandidateModel: CandidateDelegate {
+    func getCandidates() -> [Candidate] {
+        return candidates
+    }
+}
+
+extension FlowCoordinator {
+    func didFinishLoadingData() {
+        voteViewController?.refreshData()
+    }
+}
     
