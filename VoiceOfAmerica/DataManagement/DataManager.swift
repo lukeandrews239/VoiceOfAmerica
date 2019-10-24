@@ -33,7 +33,6 @@ class DataManager {
             return TransactionResult.success(withValue: curData)
         }) { (error: Error?, committed: Bool, snapshot: DataSnapshot?) in
             if let error = error {
-                print("YUUUUUPPPPPP")
                 print(error.localizedDescription)
                 completion(nil)
             } else {
