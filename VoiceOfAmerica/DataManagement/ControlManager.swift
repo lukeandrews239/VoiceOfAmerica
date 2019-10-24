@@ -45,8 +45,8 @@ class ControlManager {
 
     // Request for current candidate values from the backend
     func getCurrentStateValues(completion: @escaping (NSDictionary?) -> ()) {
-        let handler = { (response: DataSnapshot) in
-            if let packet = response.value as? NSDictionary {
+        let handler = { (response: DataSnapshot?) in
+            if let packet = response?.value as? NSDictionary {
                 completion(packet)
             } else {
                 completion(nil)

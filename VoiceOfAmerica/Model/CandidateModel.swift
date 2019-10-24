@@ -18,11 +18,13 @@ class CandidateModel {
 
     var delegate: CoordinatorDelegate?
 
-    init() {
-        makeCandidates()
+    typealias DataCompletion = ([Candidate], CandidateDelegate) -> ()
+
+    init(dataCompletion: DataCompletion?) {
+        makeCandidates(completion: dataCompletion ?? nil)
     }
 
-    func makeCandidates() {
+    func makeCandidates(completion: DataCompletion?) {
         var candidateData: NSDictionary = NSDictionary()
         let group = DispatchGroup()
         group.enter()
@@ -48,7 +50,11 @@ class CandidateModel {
                     weakSelf.candidates.append(Candidate(name: name, bio: bio ?? "Dic/Server mismatch", face: UIImageView(), votes: voteTally))
                 }
             }
-            weakSelf.delegate?.didFinishLoadingData()
+            if let completionToExecute = completion {
+                completionToExecute(weakSelf.candidates, weakSelf)
+            } else {
+                weakSelf.delegate?.didFinishLoadingData()
+            }
         }))
     }
 }

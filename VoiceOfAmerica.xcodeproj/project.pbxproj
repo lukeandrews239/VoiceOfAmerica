@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		591D3C6992A6753A9D7AB0F3 /* Pods_VoiceOfAmerica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DAA91F3EAEBBF7E4E084E4A /* Pods_VoiceOfAmerica.framework */; };
 		6B0CFE5A616208D84243595C /* libPods-VoiceOfAmericaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9A5448E2D2187EFAAD5C592 /* libPods-VoiceOfAmericaTests.a */; };
+		B245C0A2235F6FC000330523 /* PollDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245C0A1235F6FC000330523 /* PollDataViewController.swift */; };
 		B2520177234F959D00D6ED47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2520176234F959D00D6ED47 /* GoogleService-Info.plist */; };
 		B252017A234F9D9600D6ED47 /* ControlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2520179234F9D9600D6ED47 /* ControlManager.swift */; };
 		B252017C234F9E0F00D6ED47 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B252017B234F9E0F00D6ED47 /* DataManager.swift */; };
@@ -42,6 +43,7 @@
 		28C9F1A026FF373FB42F9C2F /* Pods-VoiceOfAmerica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmerica.debug.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmerica/Pods-VoiceOfAmerica.debug.xcconfig"; sourceTree = "<group>"; };
 		49CE3EB63E7B608CB2362EC7 /* Pods-VoiceOfAmericaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoiceOfAmericaTests.release.xcconfig"; path = "Target Support Files/Pods-VoiceOfAmericaTests/Pods-VoiceOfAmericaTests.release.xcconfig"; sourceTree = "<group>"; };
 		9DAA91F3EAEBBF7E4E084E4A /* Pods_VoiceOfAmerica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VoiceOfAmerica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B245C0A1235F6FC000330523 /* PollDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollDataViewController.swift; sourceTree = "<group>"; };
 		B2520176234F959D00D6ED47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2520179234F9D9600D6ED47 /* ControlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlManager.swift; sourceTree = "<group>"; };
 		B252017B234F9E0F00D6ED47 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				B2AFB142234EC52E00F14B4C /* VoteViewController.swift */,
 				FF9F62D5235107C300ACCADD /* CandidateInitialCell.swift */,
+				B245C0A1235F6FC000330523 /* PollDataViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				B2AFB161234ECBE700F14B4C /* Coordinator.swift in Sources */,
 				FF24EC9B2350E615006EB319 /* CandidateProtocol.swift in Sources */,
 				B252017A234F9D9600D6ED47 /* ControlManager.swift in Sources */,
+				B245C0A2235F6FC000330523 /* PollDataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

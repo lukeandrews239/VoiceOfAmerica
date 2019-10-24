@@ -19,7 +19,7 @@ class DataManager {
     typealias FirebaseCompletion = (_ error: Error?, _ ref: DatabaseReference?) -> ()
 
     // Request typealias
-    typealias FirebaseSnapshot = (DataSnapshot) -> ()
+    typealias FirebaseSnapshot = (DataSnapshot?) -> ()
 
     // Takes a completion block for execution upon reception of command response
     func addNewPrimaryEntry(entryData: String, completion: @escaping FirebaseCompletion) {
@@ -28,7 +28,18 @@ class DataManager {
 
     // Get the current state of all candidates
     func getCurrentStateValues(completion: @escaping FirebaseSnapshot) {
-        databaseReference.child("PresidentialCandidates").observeSingleEvent(of: .value, with: completion)
+        //databaseReference.child("PresidentialCandidates").observeSingleEvent(of: .value, with: completion)
+        databaseReference.child("PresidentialCandidates").runTransactionBlock({ (curData: MutableData) -> TransactionResult in
+            return TransactionResult.success(withValue: curData)
+        }) { (error: Error?, committed: Bool, snapshot: DataSnapshot?) in
+            if let error = error {
+                print("YUUUUUPPPPPP")
+                print(error.localizedDescription)
+                completion(nil)
+            } else {
+                completion(snapshot)
+            }
+        }
     }
 
     // Request to update a value - exclusively used as a transaction parameter to prevent concurrent mutation requests

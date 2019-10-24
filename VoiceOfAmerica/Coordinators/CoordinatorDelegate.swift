@@ -11,6 +11,6 @@ import UIKit
 
 protocol CoordinatorDelegate: AnyObject {
     // Interface to limit access of View Controllers that neccesitate callbacks to the coordinator
-    func didVote(candidate: String)
+    func didVote(candidate: Candidate)
     func didFinishLoadingData()
 }
