@@ -89,7 +89,13 @@ extension VoteViewController {
 
     func didVoteForCandidate(candidate: Candidate?) {
         if let castVote = candidate {
-            delegate?.didVote(candidate: castVote)
+            controlManager.voteForCandidate(candidate: castVote.getName()) { updatedCandidates in
+                guard updatedCandidates != nil else {
+                    //TODOluke: attempted to vote but failed
+                    return
+                }
+                self.delegate?.didVote(candidate: castVote)
+            }
         }
     }
 
