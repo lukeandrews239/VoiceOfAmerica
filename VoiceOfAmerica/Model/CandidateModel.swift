@@ -50,8 +50,8 @@ class CandidateModel {
                     weakSelf.candidates.append(Candidate(name: name, bio: bio ?? "Dic/Server mismatch", face: UIImageView(), votes: voteTally))
                 }
             }
-            if let completionToExecute = completion {
-                completionToExecute(weakSelf.candidates, weakSelf)
+            if let dataCompletion = completion {
+                dataCompletion(weakSelf.candidates, weakSelf)
             } else {
                 weakSelf.delegate?.didFinishLoadingData()
             }

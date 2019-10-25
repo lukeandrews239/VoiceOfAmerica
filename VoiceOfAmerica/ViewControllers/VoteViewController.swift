@@ -80,7 +80,7 @@ extension VoteViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let castAction = UIAlertAction(title: "Vote", style: .default) { [weak self] action in
             // We'll need to index the candidate array here with indexPath.row get the right candidate
-            self?.didVoteForCandidate(candidate: nil)
+            self?.didVoteForCandidate(candidate: self?.candidates[indexPath.row])
         }
         finalVoteAlert.addAction(cancelAction)
         finalVoteAlert.addAction(castAction)
