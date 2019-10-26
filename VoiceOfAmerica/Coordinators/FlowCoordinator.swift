@@ -32,6 +32,13 @@ class FlowCoordinator: Coordinator {
         self.voteViewController = voteVC
         self.navigationController.pushViewController(voteVC, animated: true)
     }
+
+    private func voteCast(candidateList: [Candidate]) {
+        if let pollVC = self.pollDataViewController {
+            pollVC.recieveDataAndReload(candidateList: candidateList)
+            self.navigationController.pushViewController(pollVC, animated: true)
+        }
+    }
 }
 
 extension FlowCoordinator: CoordinatorDelegate {
@@ -47,7 +54,7 @@ extension FlowCoordinator: CoordinatorDelegate {
             let pollVC = PollDataViewController()
             weakSelf.pollDataViewController = pollVC
             pollVC.delegate = self
-            pollVC.recieveDataAndReload(candidateList: candidates)
+            weakSelf.voteCast(candidateList: candidates)
         }
         let model = CandidateModel(dataCompletion: handler)
         self.model = model
