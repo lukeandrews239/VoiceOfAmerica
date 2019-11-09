@@ -28,7 +28,6 @@ class DataManager {
 
     // Get the current state of all candidates
     func getCurrentStateValues(completion: @escaping FirebaseSnapshot) {
-        //databaseReference.child("PresidentialCandidates").observeSingleEvent(of: .value, with: completion)
         databaseReference.child("PresidentialCandidates").runTransactionBlock({ (curData: MutableData) -> TransactionResult in
             return TransactionResult.success(withValue: curData)
         }) { (error: Error?, committed: Bool, snapshot: DataSnapshot?) in
