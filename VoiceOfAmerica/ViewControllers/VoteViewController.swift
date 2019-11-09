@@ -31,13 +31,9 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.backgroundColor = UIColor.white
         // Test vote for a candidate
         controlManager.voteForCandidate(candidate: "Joe Walsh") { response in
-            print(response)
+            print(response ?? "Response failed")
         }
         layoutViews()
-    }
-
-    @objc func vote(candidate: String) {
-        delegate?.didVote(candidate: candidate)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,5 +70,34 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         tableView.reloadData()
     }
+}
+
+extension VoteViewController {
+    // This function will create an alertView that seals one's vote
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Do something with AlertView, which has an action completion to call didVote
+        let finalVoteAlert = UIAlertController(title: "Cast Vote?", message: "You can only vote once, all votes are final!", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let castAction = UIAlertAction(title: "Vote", style: .default) { [weak self] action in
+            // We'll need to index the candidate array here with indexPath.row get the right candidate
+            self?.didVoteForCandidate(candidate: self?.candidates[indexPath.row])
+        }
+        finalVoteAlert.addAction(cancelAction)
+        finalVoteAlert.addAction(castAction)
+        present(finalVoteAlert, animated: true, completion: nil)
+    }
+
+    func didVoteForCandidate(candidate: Candidate?) {
+        if let castVote = candidate {
+            controlManager.voteForCandidate(candidate: castVote.getName()) { updatedCandidates in
+                guard updatedCandidates != nil else {
+                    //TODOluke: attempted to vote but failed
+                    return
+                }
+                self.delegate?.didVote(candidate: castVote)
+            }
+        }
+    }
+
 }
 
