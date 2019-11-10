@@ -27,7 +27,6 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "VOICE OF AMERICA"
-        // Sample red color to demonstrate architecture completeness
         self.view.backgroundColor = UIColor.white
         // Test vote for a candidate
         controlManager.voteForCandidate(candidate: "Joe Walsh") { response in
@@ -44,7 +43,6 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: CandidateInitialCell.identifier) as! CandidateInitialCell
         cell.nameText = candidates[indexPath.row].getName()
         cell.bioText = candidates[indexPath.row].bio
-        // do some shit to it
         return cell
     }
 
@@ -64,10 +62,7 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func refreshData() {
-        if let newCandidates = model?.getCandidates() {
-                self.candidates = newCandidates
-                tableView.reloadData()
-        }
+        self.candidates = model?.getCandidates() ?? candidates
         tableView.reloadData()
     }
 }
@@ -79,7 +74,6 @@ extension VoteViewController {
         let finalVoteAlert = UIAlertController(title: "Cast Vote?", message: "You can only vote once, all votes are final!", preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let castAction = UIAlertAction(title: "Vote", style: .default) { [weak self] action in
-            // We'll need to index the candidate array here with indexPath.row get the right candidate
             self?.didVoteForCandidate(candidate: self?.candidates[indexPath.row])
         }
         finalVoteAlert.addAction(cancelAction)

@@ -21,7 +21,7 @@ class CandidateModel {
     typealias DataCompletion = ([Candidate], CandidateDelegate) -> ()
 
     init(dataCompletion: DataCompletion?) {
-        makeCandidates(completion: dataCompletion ?? nil)
+        makeCandidates(completion: dataCompletion)
     }
 
     func makeCandidates(completion: DataCompletion?) {
@@ -64,14 +64,6 @@ struct Candidate {
     var bio: String
     var face: UIImageView
     var votes: Int
-
-
-    init(name: String, bio: String, face: UIImageView, votes:Int) {
-        self.name = name
-        self.bio = bio
-        self.face = face
-        self.votes = votes
-    }
 
     func getName() -> String {
         return name
