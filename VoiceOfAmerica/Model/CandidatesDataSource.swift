@@ -38,18 +38,10 @@ struct CandidatesDataSource {
     }
 
     static func generateNames() -> [String] {
-        var names = [String]()
-        for c in candidates {
-            names.append(c.key)
-        }
-        return names
+        return candidates.map { $0.key }
     }
 
     static func generateBios() -> [String] {
-        var names = [String]()
-        for c in candidates {
-            names.append(c.value)
-        }
-        return names
+        return candidates.map { $0.value }
     }
 }

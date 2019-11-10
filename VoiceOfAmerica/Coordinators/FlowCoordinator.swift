@@ -34,10 +34,11 @@ class FlowCoordinator: Coordinator {
     }
 
     private func voteCast(candidateList: [Candidate]) {
-        if let pollVC = self.pollDataViewController {
-            pollVC.recieveDataAndReload(candidateList: candidateList)
-            self.navigationController.pushViewController(pollVC, animated: true)
+        guard let pollVC = self.pollDataViewController else {
+            return
         }
+        pollVC.recieveDataAndReload(candidateList: candidateList)
+        self.navigationController.pushViewController(pollVC, animated: true)
     }
 }
 
