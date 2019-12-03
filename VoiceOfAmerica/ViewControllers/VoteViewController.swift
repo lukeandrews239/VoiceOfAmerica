@@ -127,9 +127,11 @@ extension VoteViewController {
 
 extension VoteViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.configureSearchBar()
         self.searchController?.isActive = false
         self.searchController?.resignFirstResponder()
         self.filteredCandidates = [Candidate]()
+        tableView.reloadData()
     }
 }
 
