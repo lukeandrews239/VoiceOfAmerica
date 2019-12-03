@@ -75,7 +75,7 @@ class VoteViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func refreshData() {
         self.candidates = model?.getCandidates() ?? candidates
-        self.filteredCandidates = candidates
+        self.filteredCandidates = [Candidate]()
         tableView.reloadData()
     }
 
@@ -99,6 +99,9 @@ extension VoteViewController {
             if !(self.filteredCandidates.isEmpty) {
                 self.searchController?.isActive = true
                 self.searchController!.searchBar.becomeFirstResponder()
+            } else {
+                self.searchController?.isActive = false
+                self.searchController!.searchBar.resignFirstResponder()
             }
         }
         let castAction = UIAlertAction(title: "Vote", style: .default) { [weak self] action in
