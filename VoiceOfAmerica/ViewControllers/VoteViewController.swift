@@ -144,8 +144,7 @@ extension VoteViewController: UISearchResultsUpdating {
     }
 
     private func filteredCandidates(curText: String) -> [Candidate] {
-        return self.candidates.filter { $0.getName().localizedCaseInsensitiveContains(curText)}
+        return self.candidates.filter { $0.getName().localizedCaseInsensitiveContains(curText) }
     }
 
 }
-
